@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.14)
+project(tests)
+
+find_package(GTest REQUIRED)
+
+set(GMOCK_INCLUDE_DIRS /usr/include/gmock)
+
+set(GMOCK_BOTH_LIBRARIES /usr/local/lib/libgmock.a /usr/local/lib/libgmock_main.a /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a)
+
+add_subdirectory(test_db)
+add_subdirectory(test_search)
+add_subdirectory(test_tgbot)
